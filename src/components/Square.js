@@ -1,3 +1,11 @@
 import React from 'react';
-const Square = (props) => <button className="square" onClick={props.onClick}>{props.value}</button>;
+import PropTypes from 'prop-types';
+
+const Square = ({ value, onClick }) => <button className="square" onClick={onClick}>{value}</button>;
+
+Square.propTypes = {
+  value: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+};
+
 export default Square;
